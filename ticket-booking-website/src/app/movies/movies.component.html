@@ -1,0 +1,268 @@
+<div class="head">
+    <h1>
+        RUNING MOVIES
+    </h1>
+</div>
+<section>
+<div class="wrapper">
+    <div class="row">
+        <ng-container *ngFor="let user of allmovieData">
+            <div class="card col-md-2">
+                <img src="../../assets/images/{{user.image}}" alt="poster">
+                <div class="descriptions">
+                <h1>
+                    {{user.movietitle}}</h1>
+                <p>
+                    DIRECTED BY : {{user.director}}<br>
+                    PRODUCED BY : {{user.producer}}<br>
+                    RELEASE DATE : {{user.date}}<br>
+                    STARING : {{user.staring}}</p>
+                <!-- <button class="btn btn-primary" (click)=addtocart(item)>bo</button> -->
+            
+                <button>        
+                    BOOK NOW
+                </button>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="card  ">
+    <div *ngFor="let user of allmovieData ">
+      <img src="../../assets/images/{{user.image}}">
+    </div>
+        <div class="descriptions">
+            <div *ngFor="let user of allmovieData ">
+                <div class="h1">{{user.movietitle}}</div>
+                <div class="p">
+                    DIRECTOR :{{user.director}}<br>
+                     PRODUCER : {{user.producer}}<br>
+                    RELEASE DATE :{{user.date}}<br>
+                    STARING :{{user.staring}}<br>
+                </div>
+            </div>
+                <button>        
+                        BOOK NOW
+                </button>
+        </div>
+</div> -->
+
+
+<!-- <div class="card  ">
+    <img src="../../../assets/images/nenjiku neethi.jpg">
+        <div class="descriptions">
+            <h1>NENJIKU NEETHI</h1>
+            <p>Directed : Arunraja Kamaraj<br>
+                Produced : Boney Kapoor<br>
+                Starring : Udhayanidhi Stalin
+                Aari Arujunan </p>
+                <button>
+                     
+                        BOOK NOW
+                </button>
+        </div>
+</div>
+<div class="card  ">
+    <img src="../../../assets/images/kgf2.jpg">
+        <div class="descriptions">
+            <h1>K.G.F: CHAPTER 2  </h1>
+            <p> 
+                Directed :	Prashanth Neel<br>
+                Written :	Prashanth Neel<br>                   
+                Produced :	Vijay Kiragandur<br>
+                Starring :	Yash Sanjay Dutt Raveena Tandon Srinidhi Shetty Prakash Raj</p>
+                <button>
+                     
+                        BOOK NOW
+                </button>
+        </div>
+</div>
+<div class="card  ">
+    <img src="../../../assets/images/doctor-strange.jpg">
+        <div class="descriptions">
+            <h1>DOCTOR STRANGE </h1>
+            <p> Directed :	Scott Derrickson<br>
+                Written :	
+                Jon Spaihts<br>
+                Produced :	Kevin Feige<br>
+                Starring :	
+                Benedict Cumberbatch
+                Chiwetel Ejiofor
+                Tilda Swinton<br>
+                   </p>
+                <button>
+                     
+                        BOOK NOW
+                </button>
+        </div>
+</div>
+<div class="card  ">
+    <img src="../../../assets/images/ayangaran.jpg">
+        <div class="descriptions">
+            <h1> AYNGARAN </h1>
+            <p>  Directed :	Ravi Arasu<br>
+                Written :	
+                Jon Spaihts
+                Scott Derrickson
+                C. Robert Cargill<br>
+                Produced :	Kevin Feige<br>
+                Starring :	 Mahima Nambiar, Siddhartha Shankar<br>  
+                   </p>
+                <button>
+                     
+                        BOOK NOW
+                </button>
+        </div>
+</div>
+<div class="card  ">
+    <img src="../../../assets/images/rrr_movie.jpg">
+        <div class="descriptions">
+            <h1> RRR</h1>
+            <p> Directed : S. S. Rajamouli<br>
+                Story :	V. Vijayendra Prasad<br>
+                Dialogue :	
+                Sai Madhav Burra<br>
+                Produced :D. V. V. Danayya<br>
+                Starring :	
+                N. T. Rama Rao Jr.
+                Ram Charan
+                Ajay Devgn
+                Alia Bhatt</p>
+                <button>
+                     
+                        BOOK NOW
+                </button>
+        </div>
+</div>
+<div class="card  ">
+    <img src="../../../assets/images/ranga.jpg">
+        <div class="descriptions">
+            <h1>RANGA</h1>
+            <p>
+                Directed :	Vinod DL<br>
+                Story :	Vinod DL<br>
+                Produced :	Vijay K Celliah<br>
+                Starring :	Sibiraj
+                Nikhila Vimal
+                Sathish  
+                   </p>
+                <button>
+                     
+                        BOOK NOW
+                </button>
+        </div>
+</div>
+<div class="card  ">
+    <img src="../../../assets/images/koogle kuttapa.jpg">
+        <div class="descriptions">
+            <h1>KOOGLE KUTTAPA</h1>
+            <p>  Directed :	SabarI Saravanan<br>
+                Screenplay :	Sabari Saravanan<br>
+                Produced :	K. S. Ravikumar
+                D. Vijaykumaran<br>
+                Starring :	K. S. Ravikumar
+                Tharshan
+                Losliya 
+                   </p>
+                <button>
+                     
+                        BOOK NOW
+                </button>
+        </div>
+</div>
+<div class="card  ">
+    <img src="../../../assets/images/visithiran.jpg">
+        <div class="descriptions">
+            <h1>VISITHIRAN</h1>
+            <p> Directed :	M. Padmakumar<br>
+                Written :	Shahi Kabir<br>
+                John Mahendran (dialogues)
+                Produced :	Bala
+                Siva Sekar Kilari<br>
+                Starring :	R. K. Suresh
+                Poorna
+                Madhu Shalini
+                   </p>
+                <button>
+                     
+                        BOOK NOW
+                </button>
+        </div>
+</div>
+<div class="card  ">
+    <img src="../../../assets/images/beasT.jpg">
+        <div class="descriptions">
+            <h1>BEAST </h1>
+            <p>  Directed :	Nelson<br>
+                Written :	Nelson<br>
+                Produced :	Kalanithi Maran<br>
+                Starring :	
+                Vijay
+                Pooja Hegde
+                   </p>
+                <button>
+                   
+                        BOOK NOW
+                </button>
+        </div>
+</div>
+<div class="card  ">
+    <img src="../../../assets/images/KRK-rambo.jpg">
+        <div class="descriptions">
+            <h1>KAATHUVAKULA RENDU KAADHAL</h1>
+            <p> Directed :	Vignesh Shivan<br>
+                Written :	Vignesh Shivan<br>
+                Produced :	
+                Vignesh Shivan
+                S. S. Lalit Kumar<br>
+                Starring :	
+                Vijay Sethupathi
+                Nayanthara
+                Samantha  
+                   </p>
+                <button>
+                     
+                        BOOK NOW
+                </button>
+        </div>
+</div>
+<div class="card  ">
+    <img src="../../../assets/images/Taanakkaran.jpg">
+        <div class="descriptions">
+            <h1>TAANAKKARAN</h1>
+            <p>  Directed :	Tamizh<br>
+                Written :	Tamizh<br>
+                Produced :	SR Prakash Babu
+                SR Prabhu
+                P Gopinath<br>
+                Starring :
+                Vikram Prabhu
+                Anjali S Nair
+                Lal
+                   </p>
+                <button>
+                     
+                        BOOK NOW
+                </button>
+        </div>
+</div> -->
+
+<!-- </section> -->

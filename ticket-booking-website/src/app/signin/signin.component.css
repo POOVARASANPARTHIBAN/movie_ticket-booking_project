@@ -1,0 +1,41 @@
+h1{
+  font-family: 'Arial Black';
+}
+.text-light{
+  color: black!important;
+  font-family: 'Constantia';
+}
+input{
+  height: 35px;
+}
+.card {
+    background-color: rgba(240, 230, 230, 0.438);
+    border: none;
+    width: 550px;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+  }
+ span{
+  font-family: 'Franklin Gothic Medium';
+ }
+  .btn{
+    width: 180px;
+    color: #000;
+    font-size: 12px;
+    padding: 12px 0;
+    background: rgb(216, 196, 196);
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 10%;
+    cursor: pointer;
+    box-shadow: 0 2px 0 2px red;
+}
+
+.btn:hover{
+    background-color: rgb(203, 35, 35);
+    box-shadow: 0 2px 0 2px black;
+    color: white;
+    transform: translateY(-5px);
+    transition: transform 0.2s;
+}

@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="navbar">
+
+        <input type="text" class="input" placeholder="Location"><i class="bi bi-geo-alt-fill" style="font-size:20px; color: red;"></i>
+        <nav>
+            <ul>
+                <li><a routerLink="/home" routerLinkactive="active">HOME</a></li>
+                <li><a routerLink="/movies" routerLinkactive="active" (click)="get()">MOVIES</a></li>
+                <li><a routerLink="/upcoming-movie" routerLinkactive="active">UPCOMING MOVIES</a></li>
+                <li><a routerLink="/theatre">THEATRES</a></li>
+                <li><a href="#">ORDERS</a></li>
+                <li><a routerLink="/events" routerLinkActive="active">EVENTS</a></li>      
+            </ul>
+        </nav>
+        <a routerLink="/login" routerLinkActive="active"><i class="bi bi-person-circle" style="font-size:20px; color: red"></i></a>     
+
+    </div>
+</div>
+
+    <router-outlet></router-outlet>
