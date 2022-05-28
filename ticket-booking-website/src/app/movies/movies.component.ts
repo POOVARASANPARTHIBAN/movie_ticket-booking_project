@@ -9,21 +9,19 @@ import { ApiService } from '../services/api.service';
 export class MoviesComponent implements OnInit {
 
   allmovie: any;
-  allmovieData: any;
-  store: any = []
-  obj: any;
-  idValue: any;
-  val: any;
-
+  allmovieData: any=[];
 
   constructor(private api:ApiService) { }
 
   ngOnInit(): void {
-    this.api.get("moviesdb").subscribe(res => {
-      console.log(res);
+    this.api.getmovie("moviesdb").subscribe(res => {
+      console.log("movies",res);
       this.allmovie = res;
-      this.allmovie = this.allmovie.rows;
-      this.allmovieData = this.allmovie.map((el: any) => el.doc);
+      this.allmovie = this.allmovie.docs;
+      for (const iterator of this.allmovie) {
+        this.allmovieData.push(iterator);
+      }
+      console.log(this.allmovieData);
     })
   }
  

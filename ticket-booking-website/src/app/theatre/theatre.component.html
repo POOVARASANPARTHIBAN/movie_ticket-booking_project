@@ -1,3 +1,36 @@
+<div class="container-2">
+    <div class="row">
+        <ng-container *ngFor="let user of alltheatreData">
+            <div class="card col-md-2">
+                <!-- <img src="../../assets/images/{{user.image}}" alt="poster"> -->
+                <div class="descriptions">
+                <h1>
+                    {{user.theatrename}}</h1>
+                <p>
+                    Location : {{user.location}}<br>
+                    Performane Time : {{user.performane}}<br>
+                    Features : {{user.features}}<br>
+                    Address : {{user.address}}<br>
+                    Contact : {{user.contact}}
+                </p>
+                <!-- <button class="btn btn-primary" (click)=addtocart(item)>bo</button> -->
+            
+                <button>        
+                    BOOK NOW
+                </button>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+
+
+
+
+
+
+
+
 <div class="head">
     <h1>
         THEATRES

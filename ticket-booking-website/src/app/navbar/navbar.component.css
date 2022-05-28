@@ -4,8 +4,7 @@
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
-.container{
-    width: 200%;
+.container-1{
     box-sizing: border-box;
 }
 .input{
@@ -38,15 +37,7 @@ nav ul li a{
 }
 
 nav a:hover{
-    display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  -webkit-transition-duration: 0.3s;
-  box-shadow: 1px 2px rgb(255, 0, 0);
-  transition-duration: 0.2s;
-  -webkit-transition-property: transform;
+  display: inline-block;
   transition-property: transform;
-  -webkit-transform: scale(0.9) rotate(8deg);
   transform: scale(1.1) rotate(8deg);
 }

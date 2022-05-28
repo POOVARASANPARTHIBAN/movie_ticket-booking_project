@@ -18,6 +18,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ShowTimeComponent } from './show-time/show-time.component';
 import { SeatsComponent } from './seats/seats.component';
 import { CheckinComponent } from './admin/checkin/checkin.component';
+import { TheatreCheckinComponent } from './admin/theatre-checkin/theatre-checkin.component';
+import { AdminLginComponent } from './admin/admin-lgin/admin-lgin.component';
 
 @NgModule({
   declarations: [
@@ -33,8 +35,10 @@ import { CheckinComponent } from './admin/checkin/checkin.component';
     SeatingComponent,
     ShowTimeComponent,
     SeatsComponent,
-    CheckinComponent
-  ],
+    CheckinComponent,
+    TheatreCheckinComponent,
+    AdminLginComponent
+ ],
   imports: [
     BrowserModule,
     AppRoutingModule,

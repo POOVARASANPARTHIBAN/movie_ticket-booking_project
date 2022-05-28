@@ -1,14 +1,14 @@
 <div class="row">
     <div class="col-75">
         <div class="container">
-            <form [formGroup]="checkinForm" (ngSubmit)="storing(this.checkinForm.value)">
+            <form [formGroup]="checkinForm" (ngSubmit)="movies(this.checkinForm.value)">
                 
                         <h3>MOVIE DETIALS</h3>
 
 
                         <div class="form-group" [class.has-error]="movietitle.invalid && movietitle.touched">
                             <label for="movietitle">Movie Title :</label>
-                            <input type="text" id="movietitle" name="movietitle" required placeholder="director name" class="form-control"
+                            <input type="text" id="movietitle" name="movietitle" required placeholder="Movie Title" class="form-control"
                                 formControlName="movietitle">
                             <div class="help-block text-danger" *ngIf="movietitle.touched">
                                 <span *ngIf="movietitle.errors?.required"> Movietitle is required!!! </span>
@@ -18,7 +18,7 @@
 
                     <div class="form-group" [class.has-error]="director.invalid && director.touched">
                         <label for="director">Directed By :</label>
-                        <input type="text" id="director" name="director" placeholder="director name" required class="form-control"
+                        <input type="text" id="director" name="director" placeholder="Director Name" required class="form-control"
                             formControlName="director">
                         <div class="help-block text-danger" *ngIf="director.touched">
                             <span *ngIf="director.errors?.required"> Director Name is required!!! </span>
@@ -27,7 +27,7 @@
 
                     <div class="form-group" [class.has-error]="producer.invalid && producer.touched">
                         <label for="producer">Produced By</label>
-                        <input type="text" id="producer" name="producer" placeholder="director name" required class="form-control"
+                        <input type="text" id="producer" name="producer" placeholder="Producer Name" required class="form-control"
                             formControlName="producer">
                         <div class="help-block text-danger" *ngIf="producer.touched">
                             <span *ngIf="producer.errors?.required"> Producer Name is required!!! </span>
@@ -36,10 +36,10 @@
 
                     <div class="form-group" [class.has-error]="date.invalid && date.touched">
                         <label for="date">Release Date :</label>
-                        <input type="date" id="date" name="producer" placeholder="Producer name" required class="form-control"
+                        <input type="date" id="date" name="producer" placeholder="Release Date" required class="form-control"
                             formControlName="date">
                         <div class="help-block text-danger" *ngIf="date.touched">
-                            <span *ngIf="producer.errors?.required"> Release Date is required!!! </span>
+                            <span *ngIf="date.errors?.required"> Release Date is required!!! </span>
                         </div>
                     </div>
 
@@ -64,18 +64,3 @@
                     <input type="submit" value="UPDATE MOVIE DATA" class="btn">
 
             </form>
-            
-            <button (click)="get()"> get</button>
-
-        </div>
-    </div>
-</div>
-<div>
-    <ul *ngFor="let user of alluserData ">
-        <li> MOVIE TITLE :{{user.movietitle}}</li>
-        <li> DIRECTOR :{{user.director}}</li>
-        <li><img src="../../../assets/images/{{user.image}}"></li>
-        <li> PRODUCER : {{user.producer}}</li>
-        <li> RELEASE DATE :{{user.date}}</li>
-    </ul>
-</div>

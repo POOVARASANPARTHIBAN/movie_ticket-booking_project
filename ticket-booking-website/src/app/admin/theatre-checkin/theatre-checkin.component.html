@@ -1,0 +1,69 @@
+<div class="row">
+    <div class="col-75">
+        <div class="container">
+            <form [formGroup]="theatreCheckin" (ngSubmit)="theatre(this.theatreCheckin.value)">
+                
+                        <h3>THEATRES DETIALS</h3>
+
+                        <div class="form-group" [class.has-error]="theatrename.invalid && theatrename.touched">
+                            <label for="theatrename">Theatre Name :</label>
+                            <input type="text" id="theatrename" name="theatrename" required placeholder="Theatre Name" class="form-control"
+                                formControlName="theatrename">
+                            <div class="help-block text-danger" *ngIf="theatrename.touched">
+                                <span *ngIf="theatrename.errors?.required"> Theatre Name is required!!! </span>
+                            </div>
+                        </div>
+
+
+                    <div class="form-group" [class.has-error]="location.invalid && location.touched">
+                        <label for="location">Location :</label>
+                        <input type="text" id="location" name="location" placeholder="Location Name" required class="form-control"
+                            formControlName="location">
+                        <div class="help-block text-danger" *ngIf="location.touched">
+                            <span *ngIf="location.errors?.required"> location is required!!! </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group" [class.has-error]="performane.invalid && performane.touched">
+                        <label for="performane">Performane Time :</label>
+                        <input type="text" id="performane" name="performane" placeholder="Theatre Performane" required class="form-control"
+                            formControlName="performane">
+                        <div class="help-block text-danger" *ngIf="performane.touched">
+                            <span *ngIf="performane.errors?.required"> performane is required!!! </span>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group" [class.has-error]="features.invalid && features.touched">
+                        <label for="features">Theatre Features :</label>
+                        <input type="text" id="features" name="features" placeholder="Features Add" required class="form-control"
+                            formControlName="features">
+                        <div class="help-block text-danger" *ngIf="features.touched">
+                            <span *ngIf="features.errors?.required"> Features is required!!! </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group" [class.has-error]="address.invalid && address.touched">
+                        <label for="address">Theatre Address :</label>
+                        <input type="address" id="address" name="address" placeholder="Theatre Address" required class="form-control"
+                            formControlName="address">
+                        <div class="help-block text-danger" *ngIf="address.touched">
+                            <span *ngIf="address.errors?.required"> Address is required!!! </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group" [class.has-error]="contact.invalid && contact.touched">
+                        <label for="contact">Contact Number</label>
+                        <input type="type" id="contact" name="contact" placeholder="Contact number" required class="form-control"
+                            formControlName="contact">
+                        <div class="help-block text-danger" *ngIf="contact.touched">
+                            <span *ngIf="contact.errors?.required"> Contact Number is required!!! </span>
+                        </div>
+                    </div>
+
+                    <input type="submit" value="UPDATE THEATRE DATA" class="btn">
+
+                </form>
+        </div>
+    </div>
+</div>

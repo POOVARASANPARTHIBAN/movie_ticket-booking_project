@@ -11,12 +11,7 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  // allmovie: any;
-  // allmovieData: any;
-  // store: any = []
-  // obj: any;
-  // idValue: any;
-  // val: any;
+
   constructor(private fb: FormBuilder, private api: ApiService,private route:Router) { }
 
   ngOnInit(): void {
@@ -24,4 +19,10 @@ export class NavbarComponent implements OnInit {
  get(){
    this.route.navigate(['movies'])
  }
+ find(){
+  this.route.navigate(['theatre'])
+ }
+ getmovie(){
+    
+}
 }

@@ -28,8 +28,6 @@ export class SigninComponent implements OnInit {
     })
   }
 
- 
-
   formdatastore(Formvalue:NgForm){
       console.log(Formvalue);
       this.api.signindata(Formvalue).subscribe(data =>{

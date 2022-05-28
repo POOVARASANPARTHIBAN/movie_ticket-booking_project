@@ -17,23 +17,11 @@ export class CheckinComponent implements OnInit {
     date: '',
     staring: '',
     image: '',
+    type: '',
     
-
   };
   alluser: any;
   alluserData: any;
-  store: any = []
-  obj: any;
-  idValue: any;
-  val: any;
-
-
-  //   this.alluser = res;
-  // this.alluser = this.alluser.rows;
-  // this.alluserData = this.alluser.map((el: any) => el.doc);
-  // console.log(this.alluserData[0]);
-  // this.api.array(this.alluserData);
-  // this.data.store(this.alluserData);
 
   constructor(private fb: FormBuilder, private api: ApiService) {
     this.checkinForm = this.fb.group({
@@ -43,13 +31,10 @@ export class CheckinComponent implements OnInit {
       date: [this.movieRecord.date],
       staring: [this.movieRecord.staring],
       image: [this.movieRecord.image],
+      type: 'movie'
     
     });
   }
-
-
-
-
 
   ngOnInit(): void {
   }
@@ -72,22 +57,10 @@ export class CheckinComponent implements OnInit {
   get image() {
     return this.checkinForm.get('image')!;
   }
-
- 
-  storing(Formvalue: any) {
-    console.log("from form", Formvalue);
-    this.api.storeData(Formvalue).subscribe((data) => {
-      console.log("data returned from server", data);
-
-    })
-  }
-
-  get() {
-    this.api.get("moviesdb").subscribe(res => {
-      console.log(res);
-      this.alluser = res;
-      this.alluser = this.alluser.rows;
-      this.alluserData = this.alluser.map((el: any) => el.doc);
+  movies(Formvalue: any) {
+    console.log("movie form", Formvalue);
+    this.api.dbstore(Formvalue).subscribe((data) => {
+      console.log("server movie data is returned", data);
     })
   }
 }
